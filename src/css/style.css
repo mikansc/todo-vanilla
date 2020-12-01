@@ -1,0 +1,149 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  line-height: 1;
+  font-size: 16px;
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+footer {
+  width: 100%;
+  border: 1px solid blue;
+}
+
+input,
+button {
+  border: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p,
+span,
+label,
+input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+/* CSS */
+
+body {
+  background-color: #e3e3e3;
+}
+
+button.btn {
+  width: 100%;
+  max-width: 50px;
+  padding: 10px 0;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: rgb(10, 71, 56);
+}
+.btn-delete {
+  background-color: rgb(134, 50, 35);
+}
+
+.container {
+  min-width: 380px;
+  max-width: 40%;
+  min-height: 100%;
+  margin: auto;
+  padding: 22px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.todo-title h1 {
+  margin: 22px 0;
+}
+
+.todo-title p {
+  margin: 1em 1em 0.5em;
+}
+
+.todo-title i {
+  margin-right: 5px;
+}
+
+.info-message {
+  font-size: 0.85rem;
+  color: #b1b1b1;
+}
+
+.todo-form {
+  margin: 20px 0;
+}
+
+.todo-form label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group input[type="text"] {
+  padding: 20px 5px 15px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.input-group button {
+  margin-left: 15px;
+}
+
+.todo-list {
+  margin-top: 50px;
+}
+
+.todo-list li {
+  width: 100%;
+  margin: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-list li span input {
+  margin-right: 15px;
+}
+
+.todo-list li button {
+  margin-left: auto;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 81, 255, 0.5);
+}
