@@ -37,7 +37,7 @@ O objetivo foi criar uma lista de tarefas, mas com funcionalidades mais avançad
 
 Busquei utilizar as melhores práticas de programação nomeando os métodos e variávies de forma descritiva, em inglês, e separando a lógica das funções de forma que cada função fosse responsável por uma tarefa específica.
 
-### [Clique aqui para acessar a demonstração](https://mn-proshop.herokuapp.com/)
+### [Clique aqui para acessar a demonstração](https://mn-todo-list.netlify.app/)
 
 ---
 
@@ -64,8 +64,7 @@ O layout foi desenvolvido por mim com HTML e CSS.
 
 <h2 align="center"> Mobile 📱 </h2>
 <p align="center" style="display: block;">
-  <img style="display: block; width: 100%; max-width: 300px;" alt="DEVInHouse" title="#DEVInHouse" src="./github/mobile.png
-  ">
+  <img style="display: block; width: 100%; max-width: 300px;" alt="DEVInHouse" title="#DEVInHouse" src="./github/mobile.png">
 </p>
 
 <p style="margin-top: 20px">
