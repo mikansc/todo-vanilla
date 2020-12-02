@@ -42,7 +42,7 @@ function handleCompleteTodo(event) {
   renderTodoList();
 }
 
-function renderTodoItemHTML(itemData, itemIndex) {
+function createTodoItemHTML(itemData, itemIndex) {
   const { title, isDone } = itemData;
   //prettier-ignore
   return `
@@ -59,11 +59,12 @@ function renderTodoItemHTML(itemData, itemIndex) {
 function renderTodoList() {
   if (allTodoList.length === 0) {
     removeTodoListFromLocalStorage();
+
     return (todoListOutput.innerHTML =
       "<p class='info-message'>Nenhuma tarefa cadastrada.<p>");
   }
   let todoListHTML = allTodoList.map((item, i) => {
-    return renderTodoItemHTML(item, i);
+    return createTodoItemHTML(item, i);
   });
 
   todoListOutput.innerHTML = todoListHTML.join("");
