@@ -17,8 +17,8 @@
   <body>
     <div class="container">
       <header class="todo-title">
-        <h1><i class="fas fa-check"></i>Lista de tarefas</h1>
-        <p>Uma to-do list feita por Michael Nascimento 😁</p>
+        <h1 class="title"><i class="fas fa-check"></i>Lista de tarefas</h1>
+        <p class="subtitle">Uma to-do list feita por Michael Nascimento 😁</p>
       </header>
       <section class="todo-form">
         <form id="addTodoForm">
@@ -27,7 +27,8 @@
             <input
               type="text"
               id="todoTitle"
-              placeholder="ex.: estudar javascript"
+              placeholder="ex. : estudar javascript"
+              autocomplete="off"
             />
             <button type="submit" class="btn btn-add">
               <i class="fas fa-plus"></i>
