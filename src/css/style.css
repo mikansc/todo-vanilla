@@ -130,6 +130,7 @@ button.btn {
 .todo-list li {
   width: 100%;
   margin: 2px;
+  padding: 2px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -141,6 +142,10 @@ button.btn {
 
 .todo-list li button {
   margin-left: auto;
+}
+
+.todo-text {
+  line-height: 1.5rem;
 }
 
 .completed {
