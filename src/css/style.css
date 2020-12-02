@@ -67,7 +67,7 @@ button.btn {
 
 .container {
   width: 50%;
-  min-width: 460px;
+  min-width: 640px;
   min-height: 100%;
   margin: auto;
   padding: 22px;
@@ -76,9 +76,11 @@ button.btn {
 }
 
 @media screen and (max-width: 767px) {
+  body {
+    padding: 0 10px;
+  }
   .container {
-    width: 100%;
-    margin: 0 10px;
+    min-width: 100%;
   }
 }
 
