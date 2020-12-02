@@ -46,13 +46,11 @@ function createTodoItemHTML(itemData, itemIndex) {
   const { title, isDone } = itemData;
   //prettier-ignore
   return `
-  <li>
-    <span class="${isDone ? "completed" : ""}">
-    <input type="checkbox" id="item-${itemIndex}" ${isDone ? "checked" : ""} />
-      ${title}
-    </span>
-    <button type="button" id="del_item-${itemIndex}" class="btn btn-delete"> <i class="far fa-trash-alt"></i> </button>
-  </li>
+    <li>
+      <span class="todo-text ${isDone ? "completed" : ""}">
+        <input type="checkbox" id="item-${itemIndex}" ${isDone ? "checked" : ""} />${title}</span>
+      <button type="button" id="del_item-${itemIndex}" class="btn btn-delete"> <i class="far fa-trash-alt"></i> </button>
+    </li>
   `;
 }
 
