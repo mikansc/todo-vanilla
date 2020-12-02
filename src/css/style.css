@@ -49,8 +49,9 @@ body {
 }
 
 button.btn {
-  width: 100%;
-  max-width: 50px;
+  min-width: 50px;
+  height: 50px;
+  margin-right: 3px;
   padding: 10px 0;
   border-radius: 3px;
   color: #fff;
@@ -65,6 +66,10 @@ button.btn {
   background-color: rgb(134, 50, 35);
 }
 
+.btn-update {
+  background-color: rgb(172, 169, 18);
+}
+
 .container {
   width: 50%;
   min-width: 640px;
@@ -75,6 +80,28 @@ button.btn {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.todo-title {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todo-title .title {
+  font-size: 42px;
+}
+
+.todo-title .subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #9b9b9b;
+  margin-top: 10px;
+}
+
+.todo-title p {
+  margin: 20px 0;
+}
+
 @media screen and (max-width: 767px) {
   body {
     padding: 0 10px;
@@ -82,20 +109,15 @@ button.btn {
   .container {
     min-width: 100%;
   }
-}
-
-.todo-title {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.todo-title h1 {
-  margin: 22px 0;
-}
-
-.todo-title p {
-  margin: 1em 1em 0.5em;
+  .todo-title {
+    text-align: left;
+  }
+  .todo-title .title {
+    font-size: 36px;
+  }
+  .todo-title .subtitle {
+    font-size: 14px;
+  }
 }
 
 .todo-title i {
@@ -118,10 +140,11 @@ button.btn {
 
 .input-group {
   display: flex;
+  align-items: center;
 }
 
 .input-group input[type="text"] {
-  padding: 20px 5px 15px;
+  padding: 17px 5px 17px 15px;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f1f1f1;
@@ -129,7 +152,7 @@ button.btn {
 }
 
 .input-group button {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .todo-list {
@@ -150,7 +173,13 @@ button.btn {
 }
 
 .todo-list li button {
-  margin-left: auto;
+  display: inline;
+  /* margin-left: auto; */
+}
+
+.todo-list-controls {
+  display: flex;
+  align-items: center;
 }
 
 .todo-text {
