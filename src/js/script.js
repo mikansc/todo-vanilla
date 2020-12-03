@@ -32,7 +32,6 @@ function handleSubmitTodo(e) {
     allTodoList[selectedIndex].title = title;
   } else {
     allTodoList.push({ title, isDone: false });
-    todoTitleInput.value = "";
   }
 
   clearInput();
@@ -66,6 +65,8 @@ function handleCompleteTodo(event) {
   });
   renderTodoList();
 }
+
+// HTML construction funciton ----------------
 
 function createTodoItemHTML(itemData, itemIndex) {
   const { title, isDone } = itemData;
