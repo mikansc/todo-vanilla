@@ -69,14 +69,14 @@ button.btn {
   background-color: rgb(172, 169, 18);
 }
 
-.btn-menu {
+/* .btn-menu {
   background-color: #aaaaaa;
-}
+} */
 
-button.btn-rounded {
+/* button.btn-rounded {
   border-radius: 50%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .container {
   width: 50%;
@@ -89,11 +89,11 @@ button.btn-rounded {
   position: relative;
 }
 
-button#menuIcon {
+/* button#menuIcon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-}
+} */
 .todo-title {
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -132,9 +132,9 @@ button#menuIcon {
   .todo-title .subtitle {
     font-size: 14px;
   }
-  #menuIcon {
+  /* #menuIcon {
     display: none;
-  }
+  } */
 }
 
 .todo-title i {
