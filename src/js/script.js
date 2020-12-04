@@ -17,8 +17,8 @@ function start() {
 
 // Actions functions ----------------
 
-function handleSubmitTodo(e) {
-  e.preventDefault();
+function handleSubmitTodo(event) {
+  event.preventDefault();
 
   todoTitleInput.focus();
   const title = todoTitleInput.value.trim();
@@ -134,5 +134,5 @@ function clearInput() {
   todoTitleInput.value = "";
 }
 
-// Execute main function when page loads
+// Execute main function
 start();
