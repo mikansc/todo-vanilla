@@ -10,36 +10,31 @@ let selectedIndex = null;
 // Main function ----------------
 function start() {
   addTodoForm.addEventListener("submit", handleSubmitTodo);
-  todoTitleInput.focus();
   getTodoListFromLocalStorage();
   renderTodoList();
+  todoTitleInput.focus();
 }
 
 // Actions functions ----------------
 
 function handleSubmitTodo(event) {
   event.preventDefault();
-
   todoTitleInput.focus();
   const title = todoTitleInput.value.trim();
-
   if (!title) {
     clearInput();
     return;
   }
-
   if (isEditMode) {
-    allTodoList[selectedIndex].title = title;
+    handleUpdateTodo(title);
   } else {
-    allTodoList.push({ title, isDone: false });
+    handleAddTodo(title);
   }
-
   clearInput();
   renderTodoList();
 }
 
-function handleTodoUpdateMode(event) {
-  event.preventDefault();
+function toggleTodoUpdateMode(event) {
   const itemToUpdate = Number(event.currentTarget.id.split("-")[1]);
   todoTitleInput.value = allTodoList[itemToUpdate].title;
   selectedIndex = itemToUpdate;
@@ -47,17 +42,25 @@ function handleTodoUpdateMode(event) {
   todoTitleInput.focus();
 }
 
+function handleAddTodo(todoTitle) {
+  allTodoList.push({ title: todoTitle, isDone: false });
+}
+
+function handleUpdateTodo(todoTitle) {
+  allTodoList[selectedIndex].title = todoTitle;
+}
+
 function handleDeleteTodo(event) {
   let confirmDelete = confirm("Você tem certeza que quer deletar a tarefa?");
   if (confirmDelete) {
-    const itemToDeleteID = Number(event.currentTarget.id.split("-")[1]);
-    allTodoList = allTodoList.filter((_, i) => i !== itemToDeleteID);
+    const itemIndexToDelete = Number(event.currentTarget.id.split("-")[1]);
+    allTodoList = allTodoList.filter((_, i) => i !== itemIndexToDelete);
   }
   renderTodoList();
 }
 
 function handleCompleteTodo(event) {
-  const itemToComplete = Number(event.target.id.split("-")[1]);
+  const itemToComplete = Number(event.currentTarget.id.split("-")[1]);
   allTodoList.forEach((todo, index) => {
     if (index === itemToComplete) {
       todo.isDone = !todo.isDone;
@@ -99,12 +102,12 @@ function renderTodoList() {
   todoListOutput.innerHTML = todoListHTML.join("");
 
   allTodoList.forEach((_, i) => {
-    const checkbox = document.querySelector(`#item-${i}`);
-    const deleteButton = document.querySelector(`#del_item-${i}`);
-    const updateButton = document.querySelector(`#update_item-${i}`);
+    const checkbox = document.getElementById(`item-${i}`);
+    const deleteButton = document.getElementById(`del_item-${i}`);
+    const updateButton = document.getElementById(`update_item-${i}`);
     checkbox.addEventListener("input", handleCompleteTodo);
     deleteButton.addEventListener("click", handleDeleteTodo);
-    updateButton.addEventListener("click", handleTodoUpdateMode);
+    updateButton.addEventListener("click", toggleTodoUpdateMode);
   });
 
   setTodoListToLocalStorage();
